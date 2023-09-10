@@ -17,10 +17,12 @@ const Products = () => {
     return false; // Exclude products that don't match the search
   });
 
-  const mapData = filteredData.map((product,id) => <Card {...product} key={id} />);
+  const mapData = filteredData.map((product, id) => (
+    <Card {...product} key={id} />
+  ));
 
   const noResultsMessage = (
-    <p>No products found matching your search criteria.</p>
+    <p className="my-10 px-5 text-xl font-semibold">No products found matching your search criteria.</p>
   );
 
   return (
@@ -28,7 +30,7 @@ const Products = () => {
       {/* search bar */}
       <nav className="flex flex-col md:flex-row md:justify-between">
         <div className="flex flex-row justify-between md:items-center ">
-          <div className="relative min-w-[40%] md:min-w-[100%]">
+          <div className="relative max-w-[65%] md:min-w-[100%]">
             <input
               type="text"
               placeholder="Search"
@@ -53,11 +55,18 @@ const Products = () => {
           <HiArrowCircleDown className="text-blackText mx-2" />
         </button>
       </nav>
-      <h1 className="text-start text-4xl my-3 font-semibold">Our Products!</h1>
+
       {/*The data */}
-      {mapData.length > 0 ? <div className="card-container">
-        {mapData}
-      </div> : noResultsMessage}
+      {mapData.length > 0 ? (
+        <div className="card-container">
+          <h1 className="text-start text-4xl my-3 font-semibold">
+            Our Products!
+          </h1>
+          {mapData}
+        </div>
+      ) : (
+        noResultsMessage
+      )}
     </div>
   );
 };

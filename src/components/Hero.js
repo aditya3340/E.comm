@@ -9,7 +9,7 @@ const Hero = () => {
       <div className="flex justify-between items-center">
         <div className="mt-10 md:flex md:flex-col">
           <h1 className="text-5xl font-bold md:text-6xl lg:text-8xl md:text-start md:max-w-[60%] ">
-            REVEL YOUR EDGINESS
+            REVEAL YOUR EDGINESS
           </h1>
           <button
             type="button"
