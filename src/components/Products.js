@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { data } from "../data";
+// import { data } from "../data";
 
 import { FaSearch } from "react-icons/fa";
 import { HiArrowCircleDown } from "react-icons/hi";
 import Card from "./Card";
 
-const Products = () => {
+const Products = ({ data }) => {
   const [search, setSearch] = useState("");
 
   const filteredData = data.filter((product) => {
@@ -22,7 +22,9 @@ const Products = () => {
   ));
 
   const noResultsMessage = (
-    <p className="my-10 px-5 text-xl font-semibold">No products found matching your search criteria.</p>
+    <p className="my-10 px-5 text-xl font-semibold">
+      No products found matching your search criteria.
+    </p>
   );
 
   return (
@@ -58,12 +60,12 @@ const Products = () => {
 
       {/*The data */}
       {mapData.length > 0 ? (
-        <div className="card-container">
+        <>
           <h1 className="text-start text-4xl my-3 font-semibold">
             Our Products!
           </h1>
-          {mapData}
-        </div>
+          <div className="card-container">{mapData}</div>
+        </>
       ) : (
         noResultsMessage
       )}
