@@ -3,6 +3,8 @@ import Nav from "../components/Nav";
 import Hero from "../components/Hero";
 import Products from "../components/Products";
 import Categories from "../components/Categories";
+import NewProducts from "../components/NewProducts";
+import NewsLetter from "../components/NewsLetter";
 
 const Home = () => {
   const [data, setData] = useState([]);
@@ -21,7 +23,9 @@ const Home = () => {
       <Hero />
       <Products data={data} />
       <Categories />
-      {/* New Arrival & NewsLetter */}
+
+      <NewProducts data={data} />
+      <NewsLetter />
     </>
   );
 };

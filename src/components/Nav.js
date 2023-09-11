@@ -12,7 +12,7 @@ const Nav = () => {
   return (
     <>
       <nav className="flex flex-row justify-between items-center py-3 px-4">
-        <h1 className="font-bold text-xl">E.comm</h1>
+        <h1 className="font-bold text-xl cursor-pointer">E.comm</h1>
 
         <div className="hidden lg:flex nav_items font-semibold">
           <ul>New Arrivals</ul>
@@ -21,13 +21,13 @@ const Nav = () => {
         </div>
 
         <div className="p-4 flex flex-row items-center">
-          <img src={Fav} alt="favorites" className="w-[25px] mx-4" />
+          <img src={Fav} alt="favorites" className="w-[25px] mx-4 cursor-pointer" />
 
           <ul>
-            <img src={cart} alt="cart" className="w-[25px] mx-4" />
+            <img src={cart} alt="cart" className="w-[25px] mx-4 cursor-pointer" />
           </ul>
           <ul>
-            <img src={account} alt="account" className="w-[25px] mx-4" />
+            <img src={account} alt="account" className="w-[25px] mx-4 cursor-pointer" />
           </ul>
         </div>
 

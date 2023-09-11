@@ -42,19 +42,19 @@ const Products = ({ data }) => {
                 setSearch(e.target.value);
               }}
             />
-            <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-              <FaSearch className="text-blackText" />
+            <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none ">
+              <FaSearch className="text-blackText " />
             </div>
           </div>
 
-          <button className="bg-primary1 text-grayText border rounded px-5 flex items-center justify-between md:py-2 md:ml-10 md:my-2">
+          <button className=" text-grayText border rounded px-5 flex items-center justify-between md:py-2 md:ml-10 md:my-2 hover:bg-blackText hover:text-white">
             price
             <HiArrowCircleDown className="text-blackText mx-2" />
           </button>
         </div>
-        <button className="hidden md:flex bg-primary1 border py-2 my-2 text-grayText rounded px-5 items-center justify-start ">
+        <button className="hidden md:flex border py-2 my-2 text-grayText rounded px-5 items-center justify-start hover:bg-blackText hover:text-white">
           <h1>Sort By</h1>
-          <HiArrowCircleDown className="text-blackText mx-2" />
+          <HiArrowCircleDown className="text-blackText mx-2 hover:text-white" />
         </button>
       </nav>
 
